@@ -1,0 +1,136 @@
+.reviews {
+    text-align: start;
+    
+}
+
+.reviews h2 {
+    color: #fabe4c;
+    margin: 0;
+    font-size: 2em;
+    justify-content: center;
+    text-align: center;
+}
+
+.reviews h3 {
+    color: #333;
+    margin: 10px 0 20px;
+    font-size: 1.5em;
+    justify-content: center;
+    text-align: center;
+}
+
+.review-cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.review-card {
+    background-color: #ffffff;
+    background-image: url('businessman-sitting-by-table-cafe1.jpg');
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    padding: 20px;
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+    color: #fff; /* Ensures text is readable on background */
+    margin: 10px; /* Add margin for spacing when wrapping */
+}
+
+.review-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 40px;
+    margin-top: -20px;
+    width: 100px;
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: rgba(240, 103, 70, 0.8); /* Orange background with opacity */
+    color: #fff;
+    border-radius: 0 0 10px 10px;
+}
+
+.review-image {
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 10px;
+    border: 3px solid white;
+}
+
+.review-info {
+    text-align: center;
+    color: white;
+}
+
+.review-info h4 {
+    margin: 0;
+    font-size: 1.2em;
+}
+
+.review-info p {
+    margin: 0;
+    font-size: 0.9em;
+}
+
+.review-rating {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    margin-bottom: 10px;
+    color:#fff;
+}
+
+.review-rating span {
+    font-size: 1.2em;
+    margin-right: 10px;
+}
+
+.stars {
+    color: gold; /* For other browsers */
+}
+
+.review-text {
+    font-size: 0.9em;
+    color: #fff;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .review-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .review-card {
+        width: 80%;
+    }
+}
+
+@media (max-width: 480px) {
+    .review-card {
+        width: 100%;
+    }
+
+    .review-header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .review-image {
+        margin: 0 0 10px 0;
+    }
+
+    .review-info {
+        text-align: center;
+    }
+}

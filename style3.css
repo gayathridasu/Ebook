@@ -1,0 +1,162 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #FFFFFF;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.container3 {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.preview-title {
+    color: gold;
+    font-weight: normal;
+    padding: 0;
+    margin: 0;
+}
+
+.main-title {
+    color: #333;
+    font-size: 2.5rem;
+}
+
+.main-title, .preview-title {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.content3 {
+    display: flex;
+    margin-top: 20px;
+}
+
+.sidebar {
+    width: 25%;
+    padding-right: 20px;
+    border: 1px solid orangered;
+    border-radius: 20px;
+    width: auto;
+    height: auto;
+    padding: 30px;
+}
+
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar li {
+    background-color: #F0F4FA;
+    margin-bottom: 10px;
+    padding: 20px;
+    border-radius: 10px;
+    color: grey;
+    
+}
+
+.main-content {
+    width: 75%;
+    padding: 30px;
+    color: grey;
+}
+
+.main-content h2 {
+    color: #424242;
+}
+
+.quote {
+    background-color: #F5F9FF;
+    padding: 20px;
+    margin: 20px 0;
+    font-size: 1.1rem;
+    color: #333;
+    font-style: italic;
+    position: relative;
+    text-align: center;
+}
+
+.quote-icon {
+    font-size: 3rem;
+    color: #FFB449;
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-weight:bolder;
+}
+
+.footer {
+    color: #666;
+}
+
+/* Media Queries */
+
+/* Mobile devices (max-width: 480px) */
+@media only screen and (max-width: 480px) {
+    .container {
+        padding: 10px;
+    }
+    .content {
+        flex-direction: column;
+    }
+    .sidebar {
+        width: 100%;
+        padding-right: 0;
+        margin-bottom: 20px;
+    }
+    .main-content {
+        width: 100%;
+        padding: 0;
+    }
+    .quote {
+        font-size: 1rem;
+    }
+}
+
+/* Tablets (max-width: 768px) */
+@media only screen and (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+    .content {
+        flex-direction: column;
+    }
+    .sidebar {
+        width: 50%;
+        padding-right: 10px;
+        margin-bottom: 20px;
+    }
+    .main-content {
+        width: 50%;
+        padding: 0;
+    }
+    .quote {
+        font-size: 1.05rem;
+    }
+}
+
+/* Laptops (max-width: 1024px) */
+@media only screen and (max-width: 1024px) {
+    .container {
+        padding: 20px;
+    }
+    .content {
+        flex-direction: row;
+    }
+    .sidebar {
+        width: 30%;
+        padding-right: 20px;
+    }
+    .main-content {
+        width: 70%;
+        padding: 30px;
+    }
+    .quote {
+        font-size: 1.1rem;
+    }
+}
