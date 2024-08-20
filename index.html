@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ebook Landing Page</title>
+    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="style3.css">
+    <link rel="stylesheet" href="style4.css">
+    <link rel="stylesheet" href="body.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-image: url('businessman-sitting-by-table-cafe.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 100vh;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            font-family: 'Helvetica Neue', sans-serif;
+            background-color: #f8f8f8;
+        }
+
+        .navbar {
+            background-color: rgba(0, 0, 0, 0.8);
+            width: 100%;
+            padding: 10px 0;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .navbar ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        .navbar ul li {
+            margin: 0 15px;
+        }
+
+        .navbar ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2em;
+            transition: color 0.3s ease;
+        }
+
+        .navbar ul li a:hover {
+            color: #ff7f00;
+        }
+
+        .container1 {
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            max-width: 1200px;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.8);
+            margin-top: 80px; /* Adjust margin to prevent overlap with navbar */
+        }
+
+        .text-content {
+            max-width: 50%;
+        }
+
+        .text-content h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+
+        .text-content p {
+            font-size: 1.2em;
+            color: gold;
+        }
+
+        .tablet-image {
+            max-width: 40%;
+            overflow: hidden;
+        }
+
+        .tablet-image img {
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .button-group a {
+            padding: 10px 20px;
+            background-color: #ff7f00;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-right: 10px;
+            transition: background-color 0.3s ease;
+        }
+
+        .button-group a:hover {
+            background-color: #e56b00;
+        }
+
+        .rating {
+            display: flex;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .stars {
+            display: flex;
+            align-items: center;
+            margin-right: 10px;
+        }
+
+        .stars svg {
+            width: 20px;
+            height: 20px;
+            margin-right: 2px;
+            fill: gold;
+        }
+
+        .rating-text {
+            font-size: 1.2em;
+            margin-right: 20px;
+        }
+
+        .reviews img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            margin-right: 5px;
+            border: 2px solid white;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .text-content {
+                max-width: 100%;
+                margin-right: 0;
+            }
+
+            .tablet-image {
+                max-width: 100%;
+                margin-top: 20px;
+            }
+        }
+        *{
+        margin: 0%;
+        padding:0%;
+        box-sizing: border-box;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    .container2 {
+    display: flex;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius:5px; /* Match the review card border radius */
+    overflow: hidden;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0px auto; /* Center the container and add margin */
+}
+
+.image {
+    flex: 3;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+}
+
+.image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px; /* Match the border radius of the review card */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Optional: Add shadow to match review cards */
+}
+
+.content {
+    flex: 2;
+    padding: 40px;
+}
+
+.content h4 {
+    color: #fabe4c; /* Match the color of h2 in the review section */
+    font-size: 1em;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.content h2 {
+    color: #333; /* Match the color of h3 in the review section */
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    font-weight: bolder;
+}
+
+.content p {
+    color: #666; /* Match the text color in the review section */
+    margin-bottom: 20px;
+    line-height: 1.6;
+    font-size: 1em;
+}
+
+.content a {
+    color: #fabe4c; /* Match the color of h2 in the review section */
+    text-decoration: none;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .container2 {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .content {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container2 {
+        width: 100%;
+    }
+
+}
+
+.author-section {
+            display: flex;
+            align-items: center;
+            padding: 20px;
+            max-width: 100%;
+            margin: 20px auto;
+            position: relative;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            box-sizing: border-box;
+        }
+
+        .author-image {
+            flex-shrink: 0;
+            margin-right: 20px;
+            text-align: center; /* Center the image */
+        }
+
+        .author-image img {
+            border-radius: 50%;
+            width: 120px;
+            height: 120px;
+            object-fit: cover;
+            border: 5px solid #fabe4c;
+        }
+
+        .author-info {
+            flex: 1;
+            text-align: left;
+        }
+
+        .author-info h2 {
+            color: #fabe4c;
+            font-size: 1.2em;
+            margin: 0 0 10px 0;
+        }
+
+        .author-info h1 {
+            color: #333;
+            font-size: 2em;
+            margin: 0 0 10px 0;
+            font-weight: bold;
+        }
+
+        .author-info p {
+            color: #666;
+            font-size: 1em;
+            line-height: 1.6;
+        }
+
+        /* Media Queries for smaller screens */
+        @media (max-width: 100%) {
+            .author-section {
+                flex-direction: column;
+                text-align: center;
+                padding: 20px;
+            }
+
+            .author-image {
+                margin-bottom: 20px;
+                margin-right: 0;
+            }
+
+            .author-info {
+                text-align: center;
+            }
+
+            .author-info h1 {
+                font-size: 1.8em;
+            }
+
+            .author-info h2 {
+                font-size: 1em;
+            }
+        }
+.z{
+    position: relative;
+}
+.aa{
+    
+    width: 100%;
+    height: 100vh;
+    clip-path: polygon(43% 0, 100% 0, 100% 100%, 0 100%, 0 74%);
+    background-color: #f29c50;
+    display: flex;
+}
+.bb{
+
+    position:absolute;
+    left: 10%;
+    top: 15%;
+    width: 45%;
+    height: 65%;
+    padding: 100px;
+    border-radius:30px;
+    z-index:1;
+    background-color:#ffffff;
+    box-shadow: 50px solid black;
+}
+.bb h2 {
+    color: #333;
+}
+
+.bb input {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 30px;
+}
+
+.bb button {
+    background: #F4A261;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    
+}
+.cc{
+    left:55%;
+    top: 15%;
+    padding: 100px;
+    position:absolute;
+    width: 40%;
+    height: 65%;
+    z-index: 1;
+    background-color: #f29c50;
+}
+.cc p{
+    font-size: 20px;
+}
+
+
+.container2 {
+    display: flex;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    width: 80%;
+    max-width: 1200px;
+}
+.image {
+    flex: 3;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+}
+.image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+.content {
+    flex: 2;
+    padding: 40px;
+}
+.content h4 {
+    color: #fbb040;
+    font-size: 1em;
+    margin-bottom: 20px;
+    font-style:inherit;
+    font-weight: 700;
+}
+.content h2 {
+    color: #000;
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    font-weight: bolder;
+}
+.content p {
+    color: #666;
+    margin-bottom: 20px;
+    line-height: 1.6;
+    font-size: 1em;
+}
+.content a {
+    color: red;
+    text-decoration: none;
+}
+    </style>
+</head>
+<body>
+    <div>
+    <div class="navbar">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">The Book</a></li>
+            <li><a href="#">Author</a></li>
+            <li><a href="#">Reviews</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Download</a></li>
+        </ul>
+    </div>
+    <div class="container1">
+        <div class="text-content">
+            <p>Introducing ebook</p>
+            <h1>Ebook Landing Page for Professionals</h1>
+            <div class="button-group">
+                <a href="#">Discover More</a>
+                <a href="#">Meet the Author</a>
+            </div>
+            <div class="rating">
+                <div class="stars">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21 16.54 14.65 22 10.27 15.82 9.64 12 4 8.18 9.64 2 10.27 7.46 14.65 5.82 21z"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21 16.54 14.65 22 10.27 15.82 9.64 12 4 8.18 9.64 2 10.27 7.46 14.65 5.82 21z"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21 16.54 14.65 22 10.27 15.82 9.64 12 4 8.18 9.64 2 10.27 7.46 14.65 5.82 21z"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21 16.54 14.65 22 10.27 15.82 9.64 12 4 8.18 9.64 2 10.27 7.46 14.65 5.82 21z"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21 16.54 14.65 22 10.27 15.82 9.64 12 4 8.18 9.64 2 10.27 7.46 14.65 5.82 21z"/></svg>
+                </div>
+                <div class="rating-text">4.5</div>
+                <div class="reviews">
+                    <img src="reviewer 1.jpg" alt="Reviewer 1">
+                    <img src="reviewe r2.jpg" alt="Reviewer 2">
+                    <img src="reviewer 3.jpg" alt="Reviewer 3">
+                </div>
+                <span>2,564 reviews</span>
+            </div>
+        </div>
+        <div class="tablet-image">
+            <img src="education-online-books.png" alt="Online Books">
+        </div>
+    </div>
+
+    <div class="container2">
+        <div class="image">
+            <img src="tablet-screen-contents.jpg" alt="Ebook Image">
+        </div>
+        <div class="content">
+            <h4>Modern & Creative</h4>
+            <h1>About The Book</h1>
+            <p>Credit goes to <a href="https://www.freepik.com">FreePik</a> for images used in this ebook landing page template. You may browse FreePik to download more free images for your website.</p>
+            <p>TemplateMo is one of the best websites to download free CSS templates for any purpose. This is an ebook landing page template using Bootstrap 5 CSS layout.</p>
+        </div>
+    </div>
+    <div class="container3">
+        <h2 class="preview-title">What's inside?</h2>
+        <h1 class="main-title">Preview at glance</h1>
+        <div class="content3">
+            <div class="sidebar">
+                <ul>
+                    <li>Introduction</li>
+                    <li>Chapter 1: <strong>Win back your time</strong></li>
+                    <li>Chapter 2: <strong>Work less, do more</strong></li>
+                    <li>Chapter 3: <strong>Delegate</strong></li>
+                    <li>Chapter 4: <strong>Habits</strong></li>
+                </ul>
+            </div>
+            <div class="main-content">
+                <h2>Introducing ebook</h2>
+                <p>This ebook landing page is good to use for any purpose. This layout is based on Bootstrap 5 CSS framework.</p>
+                <p><strong>What is Content Marketing?</strong> If you are wondering what content marketing is all about, this is the place to start.</p>
+                <div class="quote">
+                    <span class="quote-icon">“</span>
+                    <p> <strong>Lorem Ipsum dolor sit amet, consectetur adipiscing kengan omeg kohm tokito</strong></p>
+                </div>
+                <p class="footer">When you need free HTML CSS templates, please visit Templatemo website which provides a variety of templates.</p>
+            </div>
+        </div>
+    </div>
+    <div class="author-section">
+        <div class="background-shapes"></div>
+        <div class="author-content">
+            <div class="author-image">
+                <img src="portrait-mature-smiling-authoress-sitting-desk.jpg" class="scrollspy-example-item-image img-fluid mb-3" alt="">
+            </div>
+            <div class="author-info">
+                <h2>Meet Author</h2>
+                <h1>Prof. Sophia</h1>
+                <p>This is an ebook landing page template with Bootstrap 5 CSS framework. It is easy to customize with the use of Bootstrap CSS classes.</p>
+                <p>Lorem ipsum dolor sit amet, consive adiplisiing elit, sed do eliusmod. tempor incididunt ut labore.</p>
+            </div>
+        </div>
+    </div>
+    <div class="reviews">
+        <h2>Reviews</h2>
+        <h3>What people saying...</h3>
+        <div class="review-cards">
+            <div class="review-card">
+                <div class="review-header">
+                    <div class="review-image" style="background-image: url('reviewer\ 1.jpg');"></div>
+                    <div class="review-info">
+                        <p>Sandy</p>
+                        <h4>Artist</h4>
+                    </div>
+                </div>
+                <div class="review-rating">
+                    <span>4.5</span>
+                    <div class="stars">
+                        ★★★★☆
+                    </div>
+                </div>
+                <p class="review-text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </p>
+            </div>
+            <div class="review-card">
+                <div class="review-header">
+                    <div class="review-image" style="background-image: url('reviewe\ r2.jpg');"></div>
+                    <div class="review-info">
+                        <p>John</p>
+                        <h4>Producer</h4>
+                    </div>
+                </div>
+                <div class="review-rating">
+                    <span>3.5</span>
+                    <div class="stars">
+                        ★★★☆☆
+                    </div>
+                </div>
+                <p class="review-text">
+                    If you need some specific CSS templates, you can Google with keywords such as templatemo one-page, templatemo portfolio, etc.
+                </p>
+            </div>
+            <div class="review-card">
+                <div class="review-header">
+                    <div class="review-image" style="background-image: url('reviewer\ 3.jpg');"></div>
+                    <div class="review-info">
+                        <p>Candy</p>
+                        <h4>VP, Design</h4>
+                    </div>
+                </div>
+                <div class="review-rating">
+                    <span>5</span>
+                    <div class="stars">
+                        ★★★★★
+                    </div>
+                </div>
+                <p class="review-text">
+                    Please tell your friends about our website that we provide 100% free CSS templates for everyone. Thank you for using our templates.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="z">
+        <div class="aa">
+         
+        </div>
+        
+        <div class="bb">
+             <h1>Get your free <br>
+                ebook</h1>
+             <form>
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="your@company.com" required>
+                <button type="submit">Download ebook</button>
+             </form>
+         </div>
+        
+        <div class="cc">
+        <p style="color: #ebb450 ">Say hi and talk to us</p>
+            <h1>Contact</h1>
+            <p><span class="bi bi-geo-alt">  London, United Kingdom</span></p>
+            <p> 010-020-0340</p>
+            <p> info@company.com</p>
+            <div class="social">
+                <svg width="64px" height="64px" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <circle cx="24" cy="24" r="20" fill="#ebb450"></circle> <path d="M24 14.1622C27.2041 14.1622 27.5837 14.1744 28.849 14.2321C30.019 14.2855 30.6544 14.481 31.0773 14.6453C31.6374 14.863 32.0371 15.123 32.457 15.5429C32.877 15.9629 33.137 16.3626 33.3547 16.9227C33.519 17.3456 33.7145 17.981 33.7679 19.1509C33.8256 20.4163 33.8378 20.7958 33.8378 23.9999C33.8378 27.2041 33.8256 27.5836 33.7679 28.849C33.7145 30.019 33.519 30.6543 33.3547 31.0772C33.137 31.6373 32.877 32.0371 32.4571 32.457C32.0371 32.8769 31.6374 33.1369 31.0773 33.3546C30.6544 33.519 30.019 33.7144 28.849 33.7678C27.5839 33.8255 27.2044 33.8378 24 33.8378C20.7956 33.8378 20.4162 33.8255 19.151 33.7678C17.981 33.7144 17.3456 33.519 16.9227 33.3546C16.3626 33.1369 15.9629 32.8769 15.543 32.457C15.1231 32.0371 14.863 31.6373 14.6453 31.0772C14.481 30.6543 14.2855 30.019 14.2321 28.849C14.1744 27.5836 14.1622 27.2041 14.1622 23.9999C14.1622 20.7958 14.1744 20.4163 14.2321 19.1509C14.2855 17.981 14.481 17.3456 14.6453 16.9227C14.863 16.3626 15.123 15.9629 15.543 15.543C15.9629 15.123 16.3626 14.863 16.9227 14.6453C17.3456 14.481 17.981 14.2855 19.151 14.2321C20.4163 14.1744 20.7959 14.1622 24 14.1622ZM24 12C20.741 12 20.3323 12.0138 19.0524 12.0722C17.7752 12.1305 16.9028 12.3333 16.1395 12.63C15.3504 12.9366 14.6812 13.3469 14.0141 14.0141C13.3469 14.6812 12.9366 15.3504 12.63 16.1395C12.3333 16.9028 12.1305 17.7751 12.0722 19.0524C12.0138 20.3323 12 20.741 12 23.9999C12 27.259 12.0138 27.6676 12.0722 28.9475C12.1305 30.2248 12.3333 31.0971 12.63 31.8604C12.9366 32.6495 13.3469 33.3187 14.0141 33.9859C14.6812 34.653 15.3504 35.0633 16.1395 35.3699C16.9028 35.6666 17.7752 35.8694 19.0524 35.9277C20.3323 35.9861 20.741 35.9999 24 35.9999C27.259 35.9999 27.6677 35.9861 28.9476 35.9277C30.2248 35.8694 31.0972 35.6666 31.8605 35.3699C32.6496 35.0633 33.3188 34.653 33.9859 33.9859C34.653 33.3187 35.0634 32.6495 35.37 31.8604C35.6667 31.0971 35.8695 30.2248 35.9278 28.9475C35.9862 27.6676 36 27.259 36 23.9999C36 20.741 35.9862 20.3323 35.9278 19.0524C35.8695 17.7751 35.6667 16.9028 35.37 16.1395C35.0634 15.3504 34.653 14.6812 33.9859 14.0141C33.3188 13.3469 32.6496 12.9366 31.8605 12.63C31.0972 12.3333 30.2248 12.1305 28.9476 12.0722C27.6677 12.0138 27.259 12 24 12Z" fill="white"></path> <path d="M24.0059 17.8433C20.6026 17.8433 17.8438 20.6021 17.8438 24.0054C17.8438 27.4087 20.6026 30.1675 24.0059 30.1675C27.4092 30.1675 30.1681 27.4087 30.1681 24.0054C30.1681 20.6021 27.4092 17.8433 24.0059 17.8433ZM24.0059 28.0054C21.7968 28.0054 20.0059 26.2145 20.0059 24.0054C20.0059 21.7963 21.7968 20.0054 24.0059 20.0054C26.2151 20.0054 28.0059 21.7963 28.0059 24.0054C28.0059 26.2145 26.2151 28.0054 24.0059 28.0054Z" fill="white"></path> <path d="M31.8507 17.5963C31.8507 18.3915 31.206 19.0363 30.4107 19.0363C29.6154 19.0363 28.9707 18.3915 28.9707 17.5963C28.9707 16.801 29.6154 16.1562 30.4107 16.1562C31.206 16.1562 31.8507 16.801 31.8507 17.5963Z" fill="white"></path> </g></svg>
+                <svg width="64px" height="64px" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <circle cx="24" cy="24" r="20" fill="#ebb450"></circle> <path fill-rule="evenodd" clip-rule="evenodd" d="M36 16.3086C35.1177 16.7006 34.1681 16.9646 33.1722 17.0838C34.1889 16.4742 34.9697 15.5095 35.3368 14.36C34.3865 14.9247 33.3314 15.3335 32.2107 15.5551C31.3123 14.5984 30.0316 14 28.6165 14C25.8975 14 23.6928 16.2047 23.6928 18.9237C23.6928 19.3092 23.7368 19.6852 23.8208 20.046C19.7283 19.8412 16.1005 17.8805 13.6719 14.9015C13.2479 15.6287 13.0055 16.4742 13.0055 17.3766C13.0055 19.0845 13.8735 20.5916 15.1958 21.4747C14.3878 21.4491 13.6295 21.2275 12.9647 20.8587V20.9203C12.9647 23.3066 14.663 25.296 16.9141 25.7496C16.5013 25.8616 16.0661 25.9224 15.6174 25.9224C15.2998 25.9224 14.991 25.8912 14.6902 25.8336C15.3166 27.7895 17.1357 29.2134 19.2899 29.2534C17.6052 30.5733 15.4822 31.3612 13.1751 31.3612C12.7767 31.3612 12.3848 31.338 12 31.2916C14.1791 32.6884 16.7669 33.5043 19.5475 33.5043C28.6037 33.5043 33.5562 26.0016 33.5562 19.4956C33.5562 19.282 33.5522 19.0693 33.5418 18.8589C34.5049 18.1629 35.34 17.2958 36 16.3086Z" fill="white"></path> </g></svg>
+                <svg width="50px" height="64px" viewBox="126.445 2.281 589 589" xmlns="http://www.w3.org/2000/svg" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><circle cx="420.945" cy="296.781" r="294.5" fill="#ebb450"></circle><path d="M516.704 92.677h-65.239c-38.715 0-81.777 16.283-81.777 72.402.189 19.554 0 38.281 0 59.357H324.9v71.271h46.174v205.177h84.847V294.353h56.002l5.067-70.117h-62.531s.14-31.191 0-40.249c0-22.177 23.076-20.907 24.464-20.907 10.981 0 32.332.032 37.813 0V92.677h-.032z" fill="#ffffff"></path></g></svg>
+                <svg width="50px" height="64px" viewBox="-7.2 -7.2 38.40 38.40" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#fff"><g id="SVGRepo_bgCarrier" stroke-width="0"><rect x="-7.2" y="-7.2" width="38.40" height="38.40" rx="19.2" fill="#ebb450" strokewidth="0"></rect></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M2 22L3.41152 16.8691C2.54422 15.3639 2.08876 13.6568 2.09099 11.9196C2.08095 6.44549 6.52644 2 11.99 2C14.6417 2 17.1315 3.02806 19.0062 4.9034C19.9303 5.82266 20.6627 6.91616 21.1611 8.12054C21.6595 9.32492 21.9139 10.6162 21.9096 11.9196C21.9096 17.3832 17.4641 21.8287 12 21.8287C10.3368 21.8287 8.71374 21.4151 7.26204 20.6192L2 22ZM7.49424 18.8349L7.79675 19.0162C9.06649 19.7676 10.5146 20.1644 11.99 20.1654C16.5264 20.1654 20.2263 16.4662 20.2263 11.9291C20.2263 9.73176 19.3696 7.65554 17.8168 6.1034C17.0533 5.33553 16.1453 4.72636 15.1453 4.31101C14.1452 3.89565 13.0728 3.68232 11.99 3.68331C7.44343 3.6839 3.74476 7.38316 3.74476 11.9202C3.74476 13.4724 4.17843 14.995 5.00502 16.3055L5.19645 16.618L4.35982 19.662L7.49483 18.8354L7.49424 18.8349Z" fill="#fff"></path> <path fill-rule="evenodd" clip-rule="evenodd" d="M9.52024 7.76662C9.33885 7.35303 9.13737 7.34298 8.96603 7.34298C8.81477 7.33294 8.65288 7.33294 8.48154 7.33294C8.32083 7.33294 8.04845 7.39321 7.81684 7.64549C7.58464 7.89719 6.95007 8.49217 6.95007 9.71167C6.95007 10.9318 7.83693 12.1111 7.95805 12.2724C8.07858 12.4337 9.67149 15.0139 12.192 16.0124C14.2883 16.839 14.712 16.6777 15.1657 16.6269C15.6189 16.5767 16.6275 16.0325 16.839 15.4476C17.0405 14.8733 17.0405 14.3693 16.9802 14.2682C16.9199 14.1678 16.748 14.1069 16.5064 13.9758C16.2541 13.8552 15.0446 13.2502 14.813 13.1693C14.5808 13.0889 14.4195 13.0487 14.2582 13.2904C14.0969 13.5427 13.623 14.0969 13.4724 14.2582C13.3306 14.4195 13.1799 14.4396 12.9377 14.3185C12.686 14.1979 11.8895 13.9356 10.9418 13.0889C10.2056 12.4331 9.71167 11.6171 9.56041 11.3755C9.41979 11.1232 9.54032 10.992 9.67149 10.8709C9.78257 10.7604 9.92378 10.579 10.0449 10.4378C10.1654 10.296 10.2056 10.1855 10.2966 10.0242C10.377 9.86292 10.3368 9.71167 10.2765 9.59114C10.2157 9.48006 9.74239 8.25997 9.52024 7.76603V7.76662Z" fill="#fff"></path> </g></svg>
+            </div>
+            <p>Copyright © 2048 ebook company</p>
+            <p>designed by templatemo</p>
+        </div>
+        
+        </div>
+        
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+        </body>
+</div>
+</body>
+</html>
